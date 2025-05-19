@@ -19,11 +19,14 @@ class MainActivity : ComponentActivity() {
                 InternetError -> llevarAlSoporteTecnico()
                 RayadoError -> eliminarJuego()
                 NoError -> vender()
+                CongeladoError -> revisar()
+                is VersionError -> consultarVersion(gameModel.error.version)  // Notar que al ser una data class hay que poner ´is´
             }
         }
     }
 
-//    private fun niIdea() {}
+    private fun consultarVersion(version: String) {    }
+    private fun revisar() {}
     private fun vender() {}
     private fun eliminarJuego() {}
     private fun llevarAlSoporteTecnico() {}
